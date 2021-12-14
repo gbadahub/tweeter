@@ -27,13 +27,15 @@
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+  
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
 </head>
 
 <body>
   <img <!-- Top nav bar (fixed) -->
+  <!-- nav bar with title -->
   <nav class="nav">
     <span class="title1">Tweeter
     </span>
@@ -43,6 +45,8 @@
       <i class="fa-solid fa-angles-down" style="font-size:30px;color:red"></i>
     </div>
   </nav>
+  
+  <!-- header -->
   <header class="header">
     <div class="img">
       <img src="/images/profile-hex.png">
@@ -54,11 +58,12 @@
   </header>
 
   <!-- Page-specific (main) content here -->
+  <!-- new tweet -->
   <main class="container">
     <section class="new-tweet">
-      <h2>Compose Tweet</h2>
-      <form method="POST" action="/" class="formText">
-        <textarea class="textBox" name="text" placeholder="What are you humming about?" id="tweet-text"></textarea>
+      <h2>What are you humming about?</h2>
+      <form method ="POST" action="/tweets/" class="formText">
+        <textarea class="textBox" name="text" id="tweet-text"></textarea>
         <div class="bttnandcutn">
           <button class="button" type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>

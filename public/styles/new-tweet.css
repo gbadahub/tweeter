@@ -28,3 +28,7 @@
   padding: 0 20em;
   
 }
+/* used to make counter  values red when - */
+.negNum{
+  color: red;
+}
