@@ -3,6 +3,10 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
+
+ /* font-family: 'Bungee', cursive;
+font-family: 'Source Sans Pro', sans-serif; */
+
 html {
   box-sizing: border-box;
 }
@@ -18,8 +22,47 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+  font-family: Source Sans Pro, sans-serif;
 }
 
+.container{
+  width: 90%;
+  background-color: #f4f1ec;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+
+.button {
+  background-color: #4056A1;
+  font-size: 25px;
+  color: #FFFFFF;
+  font-family: 'Bungee', cursive;
+}
+
+.bttnandcutn{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.counter{
+  background: transparent;
+  font-size: 25px;
+  font-family: 'Bungee', cursive;
+}
+
+.textBox{
+  font-size: 25px;
+  font-family: 'Bungee', cursive;
+  background: transparent;
+  border: 0px none;
+  border-bottom:4px solid black;
+  padding: 0 20em;
+  
+
+}
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */

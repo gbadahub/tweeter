@@ -1,0 +1,30 @@
+
+.button {
+  background-color: #4056A1;
+  font-size: 25px;
+  color: #FFFFFF;
+  font-family: 'Bungee', cursive;
+}
+
+.bttnandcutn{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.counter{
+  background: transparent;
+  font-size: 25px;
+  font-family: 'Bungee', cursive;
+}
+
+.textBox{
+  font-size: 25px;
+  font-family: 'Bungee', cursive;
+  background: transparent;
+  border: 0px none;
+  border-bottom:4px solid black;
+  padding: 0 20em;
+  
+}

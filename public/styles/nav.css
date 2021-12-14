@@ -1,0 +1,39 @@
+.nav {
+background-color: #4056A1;
+padding-top: 1em;
+height: 120px;
+width: 100%;
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+position: absolute;
+z-index: 20;
+}
+
+.title1{
+  margin-left: 1.5em;
+  color: #FFFFFF;
+  font-size: 50px;
+  font-family: 'Bungee', cursive;
+  
+}
+
+.title2 {
+  margin-bottom: 1.5em;
+  margin-right: 1.5em;
+  font-size: 20px;
+  font-family: sans-serif;
+  color: #FFFFFF;
+}
+
+.title3 {
+  display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+
+
+
+
