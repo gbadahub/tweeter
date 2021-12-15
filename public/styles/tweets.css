@@ -17,9 +17,14 @@ article:hover {
 .tweetHeader{
   padding: 1em;
 }
-.icons:hover {
-background-image:yellow;
+.icons {
+color: navy;
 }
+
+.icons:hover{
+  color: #ffbf00;
+  }
+
 
 .tweetFooter{
   padding: 0.5em;
