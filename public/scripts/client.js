@@ -72,6 +72,22 @@ const createTweetElement = function (tweet) {
   return $tweet
 }
   renderTweets(data);
+
+  //prevents the default form submission behaviour of sending the post request and reloading the page
+    $( ".formText" ).submit (function( event ) {
+    event.preventDefault();
+  
+    $.ajax({
+      url : "/tweets/",
+      Method: 'POST',
+      //creates a text string in standard URL-encoded notation
+      data : $(this).serialize(),
+      correct: function (data){
+        console.log("correct")
+      }
+    })
+  })
 })
+
 
 
