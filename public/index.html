@@ -24,10 +24,11 @@
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  
+
   <!-- App JS -->
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
@@ -40,12 +41,12 @@
     <span class="title1">Tweeter
     </span>
     <div class="title3">
-    <line class="title2" ><b>Write</b> a new tweet</line>
+      <line class="title2"><b>Write</b> a new tweet</line>
 
       <i class="fa-solid fa-angles-down" style="font-size:30px;color:red"></i>
     </div>
   </nav>
-  
+
   <!-- header -->
   <header class="header">
     <div class="img">
@@ -62,7 +63,7 @@
   <main class="container">
     <section class="new-tweet">
       <h2>What are you humming about?</h2>
-      <form method ="POST" action="/tweets/" class="formText">
+      <form method="POST" action="/tweets/" class="formText">
         <textarea class="textBox" name="text" id="tweet-text"></textarea>
         <div class="bttnandcutn">
           <button class="button" type="submit">Tweet</button>
@@ -70,6 +71,33 @@
         </div>
       </form>
     </section>
+
+    <article class="article">
+      <header class="tweetHeader">
+        
+        <div class="tweetTitle">
+          <img src="https://i.imgur.com/nlhLi3I.png"> 
+          <div class="userName">Nicki Minaj</div>
+          @HelloKitty
+        </div>
+           <div>You could be the king but watch the Queen conquer</div>  
+      </header>
+
+        <footer class="tweetFooter">
+          <div>
+            10 days ago
+
+          </div>
+          
+          <div class="icons">
+            <i class="fas fa-flag"></i>
+            <i class="fas fa-retweet"></i>
+            <i class="fas fa-heart"></i>
+          </div>
+          
+        </footer>
+
+    </article>
   </main>
 </body>
 
