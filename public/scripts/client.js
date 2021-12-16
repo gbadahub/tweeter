@@ -92,14 +92,18 @@ $(document).ready(function () {
   //prevents the default form submission behaviour of sending the post request and reloading the page
   $(".formText").submit(function (event) {
     event.preventDefault();
-    let input = $(this).find('textarea').val()
+
+    $('.error-message').slideUp(400).text('')
+
+    let input = $("#tweet-text").val()
     console.log("input:",input)
 
-    if (input.length < 1 ){
+    if (!input.length){
       $('.counter').text(140)
-      return alert("Tweet area cannot be empty.Please enter valid text")
-    } else if ($(this).val().length > 140) {
-      return alert("Tweet cannot be over 140 characters!")
+      return $('.error-message').text('Please enter a valid tweet').slideDown()
+    } else if (input.length > 140) {
+
+      return $('.error-message').text('Your Tweet exceeds the maximum 140 characters').slideDown()
     }
 
     $.ajax({
