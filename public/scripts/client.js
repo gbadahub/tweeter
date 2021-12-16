@@ -33,9 +33,9 @@ $(document).ready(function () {
   ]
 
   const renderTweets = function (data) {
-    $("#tweets-container").empty();
+     $("#tweets-container").empty();
     for (let tweet of data) {
-      $('#tweets-container').append(createTweetElement(tweet));
+      $('#tweets-container').prepend(createTweetElement(tweet));
     }
   };
 
@@ -75,36 +75,7 @@ $(document).ready(function () {
   }
   renderTweets(data);
 
-  
-
-  //prevents the default form submission behaviour of sending the post request and reloading the page
-  $(".formText").submit(function (event) {
-    console.log("hi")
-    event.preventDefault();
-
-    if (!$(this).children().find('textarea').val()){
-      $('.counter').text(140)
-      return alert("Tweet area cannot be empty.Please enter valid text")
-    } else if ($(this).val().length > 140 ){
-      return alert("Tweet cannot be over 140 characters!")
-    }
-
-    $.ajax({
-      url: "/tweets/",
-      method: 'POST',
-      //creates a text string in standard URL-encoded notation
-      data: $(this).serialize(),
-      correct: function (data) {
-        console.log("correct")
-      },
-      error: (err) => {
-        console.log(err)
-      }
-    })
-  })
-
   const loadTweets = function () {
-
     $.ajax({
       url: "/tweets/",
       method: 'GET',
@@ -119,6 +90,39 @@ $(document).ready(function () {
     });
   }
 
+  //prevents the default form submission behaviour of sending the post request and reloading the page
+  $(".formText").submit(function (event) {
+    event.preventDefault();
+    let input = $(this).find('textarea').val()
+    console.log("input:",input)
+
+    if (input.length < 1 ){
+      $('.counter').text(140)
+      return alert("Tweet area cannot be empty.Please enter valid text")
+    } else if ($(this).val().length > 140) {
+      return alert("Tweet cannot be over 140 characters!")
+    }
+
+    $.ajax({
+      url: "/tweets/",
+      method: 'POST',
+      type: "application/json",
+      //creates a text string in standard URL-encoded notation
+      data: $(this).serialize(),
+      success: function (data) {
+        $("textarea").val("");
+          $.get("http://localhost:8080/tweets/", data => {
+            const newTweet = [data.slice(-1).pop()];
+            renderTweets(newTweet);
+          });
+        console.log("Success")
+      },
+      error: (err) => {
+        console.log(err)
+      }
+      
+    })
+  })
   loadTweets()
 })
 
