@@ -33,7 +33,6 @@ $(document).ready(function () {
   ]
 
   const renderTweets = function (data) {
-     $("#tweets-container").empty();
     for (let tweet of data) {
       $('#tweets-container').prepend(createTweetElement(tweet));
     }
@@ -53,7 +52,7 @@ $(document).ready(function () {
     <div class="userName">${user.name}</div>
     ${user.handle}
   </div>
-     <div>${content.text}</div>  
+     <div>${$("<p>").text(content.text).html()}</div>
 </header>
 
   <footer class="tweetFooter">
