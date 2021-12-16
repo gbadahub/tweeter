@@ -81,8 +81,9 @@ $(document).ready(function () {
   $(".formText").submit(function (event) {
     console.log("hi")
     event.preventDefault();
-    
+
     if (!$(this).children().find('textarea').val()){
+      $('.counter').text(140)
       return alert("Tweet area cannot be empty.Please enter valid text")
     } else if ($(this).val().length > 140 ){
       return alert("Tweet cannot be over 140 characters!")
