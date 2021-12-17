@@ -48,8 +48,10 @@ $(document).ready(function () {
 <header class="tweetHeader">
   
   <div class="tweetTitle">
+  <div class="avatar">
     <img src="${user.avatars}"> 
-    <div class="userName">${user.name}</div>
+    <div >${user.name}</div>
+  </div>
     ${user.handle}
   </div>
      <div>${$("<p>").text(content.text).html()}</div>
@@ -75,6 +77,7 @@ $(document).ready(function () {
   renderTweets(data);
 
   const loadTweets = function () {
+    $('#tweets-container').empty();
     $.ajax({
       url: "/tweets/",
       method: 'GET',
@@ -96,9 +99,9 @@ $(document).ready(function () {
     $('.error-message').slideUp(400).text('')
 
     let input = $("#tweet-text").val()
-    console.log("input:",input)
+    console.log("input:", input)
 
-    if (!input.length){
+    if (!input.length) {
       $('.counter').text(140)
       return $('.error-message').text('Please enter a valid tweet').slideDown()
     } else if (input.length > 140) {
@@ -114,16 +117,16 @@ $(document).ready(function () {
       data: $(this).serialize(),
       success: function (data) {
         $("textarea").val("");
-          $.get("http://localhost:8080/tweets/", data => {
-            const newTweet = [data.slice(-1).pop()];
-            renderTweets(newTweet);
-          });
+        $.get("http://localhost:8080/tweets/", data => {
+          const newTweet = [data.slice(-1).pop()];
+          renderTweets(newTweet);
+        });
         console.log("Success")
       },
       error: (err) => {
         console.log(err)
       }
-      
+
     })
   })
   loadTweets()

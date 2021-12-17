@@ -39,8 +39,5 @@ color: navy;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
-}
-.userName{
-  margin-right: 25em;
+  /* align-items: center; */
 }

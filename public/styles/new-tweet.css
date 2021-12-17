@@ -12,6 +12,12 @@
   justify-content: space-between;
   align-items: flex-end;
 }
+.avatar{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  
+}
 
 .counter{
   background: transparent;
@@ -20,12 +26,14 @@
 }
 
 .textBox{
-  font-size: 25px;
-  font-family: 'Bungee', cursive;
-  background: transparent;
-  border: 0px none;
-  border-bottom:4px solid black;
-  padding: 0 20em;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  margin-bottom: 10px;
+  align-items: center;
+  border-bottom: 3px solid black;
+  
   
 }
 .error-message {

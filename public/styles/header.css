@@ -9,3 +9,32 @@
   background-image: url("../images/padded-light.png");
   background-color: #485063;
 }
+
+@media only screen and (min-width: 1024px) {
+  
+.media{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 50px;
+  padding-top: 5em;
+  
+  
+}
+.header{
+  float: left;
+  margin-top: 20;
+  padding: 50px;
+height: 50%;
+width: 50%;
+background-image: url("../images/padded-light.png");
+background-color: #485063;
+}
+
+.container {
+  margin-right: 120px;
+  flex: 0.65;
+  float: right;
+}
+
+}
