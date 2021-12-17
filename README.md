@@ -7,9 +7,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Final Product
 
-!["screenshot description"](#)
+!["screenshot description"](https://github.com/gbadahub/tweeter/blob/master/docs/desktopSize.png)
 
-!["screenshot description"](#)
+!["screenshot description"](https://github.com/gbadahub/tweeter/blob/master/docs/tabletSize.png)
 
 
 ## Getting Started
